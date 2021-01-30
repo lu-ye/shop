@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,6 +12,9 @@
 		<script src="js/jquery-3.3.1.js"></script>
     </head>
 	<body>
+
+
+
 	<!--引入头部-->
 	<div id="header"></div>
         <!-- 头部 end -->
@@ -23,7 +27,7 @@
     			<div class="rg_form_center">
 					
 					<!--注册表单-->
-    				<form id="registerForm" action="${pageContext.request.contextPath}/user?method=register">
+    				<form id="registerForm" action="${path}/user?method=register" method="post">
 						<!--提交处理请求的标识符-->
 						<input type="hidden" name="action" value="register">
     					<table style="margin-top: 25px;">
