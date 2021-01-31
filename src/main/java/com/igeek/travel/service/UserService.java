@@ -23,4 +23,26 @@ public class UserService {
         }
         return false;
     }
+
+    //激活
+    public boolean active(String code){
+        try {
+            return dao.updateState(code)>0 ? true :false;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    //登录
+    public User login(String name , String password){
+        User user = null;
+
+        try {
+             user = dao.selectOne(name, password);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return user;
+    }
 }

@@ -8,7 +8,7 @@ import java.util.Date;
  * @Date 2021/1/26 21:47
  */
 public class User {
-    private int uid;
+    private String uid;
     private String username;
     private String password;
     private String name;
@@ -23,7 +23,7 @@ public class User {
     public User() {
     }
 
-    public User(int uid, String username, String password, String name, Date birthday, String sex, String telephone, String email, String state, String code) {
+    public User(String uid, String username, String password, String name, Date birthday, String sex, String telephone, String email, String state, String code) {
         this.uid = uid;
         this.username = username;
         this.password = password;
@@ -40,7 +40,7 @@ public class User {
      * 获取
      * @return uid
      */
-    public int getUid() {
+    public String getUid() {
         return uid;
     }
 
@@ -48,7 +48,7 @@ public class User {
      * 设置
      * @param uid
      */
-    public void setUid(int uid) {
+    public void setUid(String uid) {
         this.uid = uid;
     }
 
