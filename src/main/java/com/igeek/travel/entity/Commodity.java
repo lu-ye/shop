@@ -8,16 +8,16 @@ import java.util.Date;
  * @Date 2021/1/31 20:22
  */
 public class Commodity {
-    private String rid;   //商品编号
-    private String rname; //商品名称
-    private Double price; //价格
+    private String rid;            //商品编号
+    private String rname;          //商品名称
+    private Double price;          //价格
     private String routeIntroduce; //商品描述
     private String rflag;
-    private Date rdate;           //上架日期
-    private String rThemeTour; //主题旅游
-    private int count; //商品数量
+    private String rdate;          //上架日期
+    private String rThemeTour;     //主题旅游
+    private int count;             //商品数量
     private int cid;
-    private String rimage;//商品图片
+    private String rimage;         //商品图片
     private int sid;
     private String sourceId;
 
@@ -25,7 +25,7 @@ public class Commodity {
     public Commodity() {
     }
 
-    public Commodity(String rid, String rname, Double price, String routeIntroduce, String rflag, Date rdate, String rThemeTour, int count, int cid, String rimage, int sid, String sourceId) {
+    public Commodity(String rid, String rname, Double price, String routeIntroduce, String rflag, String rdate, String rThemeTour, int count, int cid, String rimage, int sid, String sourceId) {
         this.rid = rid;
         this.rname = rname;
         this.price = price;
@@ -124,7 +124,7 @@ public class Commodity {
      * 获取
      * @return rdate
      */
-    public Date getRdate() {
+    public String getRdate() {
         return rdate;
     }
 
@@ -132,7 +132,7 @@ public class Commodity {
      * 设置
      * @param rdate
      */
-    public void setRdate(Date rdate) {
+    public void setRdate(String rdate) {
         this.rdate = rdate;
     }
 

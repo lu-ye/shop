@@ -55,12 +55,12 @@
 			<div class="submit_btn">
         				<button type="button">登录</button>
         				<div class="auto_login">
-        					<input type="checkbox" name="" class="checkbox">
+        					<input type="checkbox" name="free" class="checkbox">
         					<span>自动登录</span>
         				</div>        				
         			</div>        			       		
         		</form>
-        		<div class="reg">没有账户？<a href="javascript:;">立即注册</a></div>
+        		<div class="reg">没有账户？<a href="register.jsp">立即注册</a></div>
         	</div>
         </div>
     </section>

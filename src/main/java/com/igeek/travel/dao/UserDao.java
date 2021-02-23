@@ -29,14 +29,9 @@ public class UserDao extends BasicDao<User>{
     }
 
     //登录
-
     public User selectOne(String username,String password) throws SQLException {
-        String sql = "select from user where username = ? and password = ?";
-        User user = (User) this.getSelectOne(sql,username,password);
+        String sql = "select from user where username = ? and password = ? and status<>0";
+        User user = (User) this.getSingleValue(sql,username,password);
         return user;
-
     }
-
-
-
 }

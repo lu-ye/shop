@@ -10,7 +10,7 @@ import java.sql.SQLException;
  * @Author yl
  * @Date 2021/1/29 10:24
  */
-public class UserService {
+public class    UserService {
     private UserDao dao =new UserDao();
 
 

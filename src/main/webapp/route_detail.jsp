@@ -1,4 +1,4 @@
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,17 +17,20 @@
     <!-- 详情 start -->   
     <div class="wrap">
         <div class="bread_box">
-            <a href="/">首页</a>
+            <a href="${path}/commodity?method=index">首页</a>
             <span> &gt;</span>
-            <a href="#">国内游</a><span> &gt;</span>
-            <a href="#">全国-曼谷6-7天自由行 泰国出境旅游 特价往返机票自由行二次确认</a>
+            <c:if test="${cid!=null&&cid!=''}">
+                <a href="${path}/commodity?method=viewCommodityListByCidPname&cid=${cid}&pname=${pname}&pageNow=${pageNow}">${cname}</a><span> &gt;</span>
+            </c:if>
+
+            <a href="JavaScript:void(0)">${commodity.rname}</a>
         </div>
         <div class="prosum_box">
             <dl class="prosum_left">
                 <dt>
-                    <img alt="" class="big_img" src="http://www.jinmalvyou.com/Public/uploads/goods_img/img_size4/201703/m49788843d72171643297ccc033d9288ee.jpg">
+                    <img alt="" class="big_img" src="${path}/${commodity.rimage}">
                 </dt>
-                <dd>
+                <%--<dd>
                     <a class="up_img up_img_disable"></a>
                     <a title="" class="little_img" data-bigpic="http://www.jinmalvyou.com/Public/uploads/goods_img/img_size4/201703/m40920d0669855e745d97f9ad1df966ebb.jpg">
                         <img src="http://www.jinmalvyou.com/Public/uploads/goods_img/img_size2/201703/m20920d0669855e745d97f9ad1df966ebb.jpg">
@@ -57,18 +60,18 @@
                         <img src="http://www.jinmalvyou.com/Public/uploads/goods_img/img_size2/201703/m287bbbc6e43eba6aa6a36cc1a182f7a20.jpg">
                     </a>
                     <a class="down_img down_img_disable" style="margin-bottom: 0;"></a>
-                </dd>
+                </dd>--%>
             </dl>
             <div class="prosum_right">
-               <p class="pros_title">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往返机票自由行二次确认</p>
-                <p class="hot">1-2月出发，网付立享￥1099/2人起！爆款位置有限，抢完即止！</p>
+               <p class="pros_title">${commodity.rname}二次确认</p>
+                <p class="hot">${commodity.routeIntroduce}</p>
                 <div class="pros_other">
                     <p>经营商家  ：国旅</p>
                     <p>咨询电话 : 400-618-9090</p>
                     <p>地址 ： 传智播客程序员</p>  
                 </div>
                 <div class="pros_price">
-                    <p class="price"><strong>¥2699.00</strong><span>起</span></p>
+                    <p class="price"><strong>${commodity.price}</strong><span>起</span></p>
                     <p class="collect">
                         <a class="btn"><i class="glyphicon glyphicon-heart-empty"></i>点击收藏</a>
 
